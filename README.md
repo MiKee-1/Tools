@@ -1,5 +1,5 @@
 # Tools
-# PDF Password Protector (protection.py)
+# protection.py
 
 This simple Python script allows you to secure any PDF file with a password, making it ideal for protecting sensitive or private documents.
 
@@ -36,7 +36,7 @@ python3 script.py myfile.pdf protected_file.pdf mySecret123
 * Handles common errors like missing files or invalid PDFs.
 * Easy to use from the command line.
 
-#QrCodeGen
+# QrCodeGen.py
 
 # QR Code Generator with Center Logo
 
@@ -89,7 +89,7 @@ qr_output_path = "/path/to/output.png"
 Run the script and the QR code image will be saved to the specified output path.
 
 ---
-#merge_pdf
+# merge_pdf.py
 
 This Python script merges two PDF files into a single output PDF using **PyPDF2**.
 
