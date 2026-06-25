@@ -91,14 +91,15 @@ Run the script and the QR code image will be saved to the specified output path.
 ---
 # merge_pdf.py
 
-This Python script merges two PDF files into a single output PDF using **PyPDF2**.
+This Python script merges an arbitrary number of PDF files into a single output PDF using **PyPDF2**. You can pick the files through a graphical dialog (no code editing needed) or pass them on the command line.
 
 ---
 
 ## Features
 
-* Merge two PDF files in order
-* Simple and lightweight
+* Merge **any number** of PDF files in the selected order
+* **Graphical file picker** — select the PDFs and the output location with a dialog, no code changes required
+* Optional command-line usage for scripting
 * Uses `PyPDF2.PdfMerger`
 
 ---
@@ -109,6 +110,7 @@ This Python script merges two PDF files into a single output PDF using **PyPDF2*
 * Library:
 
   * `PyPDF2`
+* `tkinter` (included with most Python installations) for the graphical file picker
 
 ---
 
@@ -122,10 +124,16 @@ pip install PyPDF2
 
 ## Usage
 
-Edit the file names or run the script directly:
+**Graphical mode (recommended):** just run the script with no arguments. A window opens to select the PDFs (hold `Ctrl` to pick several) and another to choose where to save the merged file.
 
-```python
-unisci_pdf("file1.pdf", "file2.pdf", "merged.pdf")
+```bash
+python merge_pdf.py
+```
+
+**Command-line mode:** pass the output file first, then the input PDFs.
+
+```bash
+python merge_pdf.py merged.pdf file1.pdf file2.pdf file3.pdf
 ```
 
 The merged PDF will be saved to the specified output file.
